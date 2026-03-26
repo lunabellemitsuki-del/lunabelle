@@ -1,0 +1,352 @@
+Gemini 修正
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luna Belle｜岐阜県関市の東洋式リラクゼーションサロン</title>
+  <meta name="description" content="Luna Belle（ルナベル）公式サイト。岐阜県関市宮地町の東洋式リラクゼーションサロン。肩こり・腰痛・疲労回復に。">
+
+  <style>
+    :root{
+      --bg:#070b14;
+      --panel:#0b1020;
+      --card:#101a2f;
+      --text:#f3f0e6;
+      --muted:rgba(243,240,230,.75);
+      --gold:#d7b56d;
+      --gold2:#f2d79a;
+      --line:rgba(215,181,109,.28);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic","Meiryo",sans-serif;
+      background:
+        radial-gradient(900px 520px at 20% 0%, rgba(215,181,109,.10), transparent 55%),
+        radial-gradient(900px 520px at 90% 10%, rgba(242,215,154,.08), transparent 55%),
+        linear-gradient(180deg, #050812, #070b14 40%, #050812);
+      color:var(--text);
+      line-height:1.7;
+    }
+    a{color:inherit; text-decoration:none;}
+    .wrap{max-width:980px;margin:0 auto;padding:14px}
+
+    .outer{
+      border:1px solid var(--line);
+      border-radius:20px;
+      background: rgba(11,16,32,.92);
+      padding:12px;
+    }
+    .inner{
+      border:1px solid rgba(215,181,109,.18);
+      border-radius:18px;
+      overflow:hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+    }
+
+    /* HERO / 新しい三日月デザイン */
+    .hero{
+      padding:40px 16px;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(215,181,109,.12), transparent 70%);
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+    .heroTop{display:flex;flex-direction:column;align-items:center;gap:16px}
+    
+    @media(min-width:600px){
+      .heroTop{flex-direction:row; text-align:left; justify-content:center;}
+    }
+
+    .moon-wrap {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* 月の背後の光彩 */
+    .moon-glow {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: var(--gold);
+      filter: blur(25px);
+      opacity: 0.3;
+      border-radius: 50%;
+    }
+
+    .kicker{
+      display:inline-block;
+      font-size:12px;
+      letter-spacing:.2em;
+      color:var(--gold2);
+      border:1px solid var(--line);
+      padding:4px 16px;
+      border-radius:999px;
+      background: rgba(0,0,0,0.3);
+      margin-bottom: 8px;
+    }
+    .brand{
+      margin:0;
+      font-size:42px;
+      letter-spacing:.1em;
+      font-family:"Times New Roman",serif;
+      color:var(--gold2);
+      line-height:1.1;
+      text-shadow: 0 0 10px rgba(215,181,109,0.3);
+    }
+    .tagline{margin:8px 0 0;color:var(--muted);font-size:14px; letter-spacing: 0.05em;}
+
+    .grid{padding:12px;display:grid;gap:12px}
+    .card{
+      background: rgba(16,26,47,.92);
+      border:1px solid rgba(215,181,109,.16);
+      border-radius: var(--radius);
+      padding:20px;
+    }
+    .card h2{
+      margin:0 0 15px;
+      font-size:18px;
+      letter-spacing:.06em;
+      color:var(--gold2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h2::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .hpBanner{
+      display:block;
+      border-radius:16px;
+      border:1px solid rgba(215,181,109,.4);
+      background: linear-gradient(135deg, rgba(215,181,109,0.15), transparent);
+      padding:16px;
+      transition: 0.3s;
+    }
+    .hpBanner:hover{ background: rgba(215,181,109,0.25); transform: translateY(-2px); }
+    .hpTop{display:flex;gap:14px;align-items:center}
+    .hpMark{
+      width:48px;height:48px;border-radius:12px;
+      background: linear-gradient(180deg, var(--gold2), var(--gold));
+      color:#1b1408;font-weight:900;
+      display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    }
+    .hpTitle{font-weight:900;color:var(--gold2);font-size:15px}
+
+    .btnRow{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+    .btn{
+      display:flex; align-items:center; justify-content:center;
+      padding:14px 10px; border-radius:14px; font-weight:800; font-size:14px;
+      border:1px solid rgba(215,181,109,.3); background: rgba(0,0,0,.2); color: var(--text);
+    }
+    .btnPrimary{ border:none; background: linear-gradient(180deg, var(--gold2), var(--gold)); color:#1b1408; }
+
+    /* メニューデザイン改善 */
+    .menuBlock{
+      margin-bottom:16px;
+      border:1px solid rgba(215,181,109,.18);
+      border-radius:14px;
+      overflow:hidden;
+      background: rgba(0,0,0,0.2);
+    }
+    .menuHead{
+      padding:12px 16px;
+      background: rgba(215,181,109,0.08);
+      border-bottom: 1px solid rgba(215,181,109,0.1);
+    }
+    .menuHead .title{ font-weight:900; color:var(--gold2); font-size:15px; }
+    .menuTable{ width:100%; border-collapse:collapse; }
+    .menuTable th, .menuTable td{
+      padding:12px 16px; border-bottom:1px solid rgba(215,181,109,.08); font-size:14px;
+    }
+    .menuTable th{ text-align:left; color:var(--text); font-weight:normal; }
+    .menuTable td{ text-align:right; }
+    .price{ color:var(--gold2); font-weight:900; font-family: 'Verdana', sans-serif; font-size: 15px;}
+
+    .optionGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .optionItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .note{ padding:12px; border-radius:12px; border:1px dashed var(--line); background: rgba(0,0,0,.15); color:var(--muted); font-size:12px; margin-top:10px; }
+    .list{ margin:0; padding:0; list-style:none; display:grid; gap:8px; font-size:14px; }
+    .list li{ background: rgba(0,0,0,.14); border:1px solid rgba(215,181,109,.14); border-radius:12px; padding:12px; }
+    
+    .mapBox{ margin-top:10px; border-radius:16px; overflow:hidden; border:1px solid rgba(215,181,109,.18); }
+    .mapBox iframe{ width:100%; height:250px; border:0; display:block; filter: grayscale(0.3) contrast(1.1); }
+
+    .footer{ text-align:center; color:rgba(243,240,230,.4); font-size:11px; padding:40px 12px 120px; }
+    .sticky{
+      position:fixed;left:0;right:0;bottom:0; background:rgba(11,16,32,.90); backdrop-filter: blur(12px);
+      border-top:1px solid rgba(215,181,109,.3); padding:16px; z-index: 100;
+    }
+    .sticky a{
+      display:block; text-align:center; padding:16px; border-radius:14px;
+      background: linear-gradient(180deg, var(--gold2), var(--gold)); color:#1b1408;
+      font-weight:900; letter-spacing:.1em; box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="outer">
+      <div class="inner">
+
+        <section class="hero">
+          <div class="heroTop">
+            <div class="moon-wrap">
+              <div class="moon-glow"></div>
+              <svg width="70" height="70" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M42 12C31.5 12 22 19.5 18 30C16 36 17.5 43 21 48C14 44 10 36 10 28C10 16 20 6 32 6C36 6 40 7.5 43 10C42.7 10 42.3 10 42 12Z" fill="url(#moonGrad)"/>
+                <defs>
+                  <linearGradient id="moonGrad" x1="10" y1="6" x2="43" y2="48" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#f2d79a"/>
+                    <stop offset="1" stop-color="#d7b56d"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div>
+              <span class="kicker">東洋式リラクゼーションサロン</span>
+              <h1 class="brand">Luna Belle</h1>
+              <p class="tagline">肩こり・腰痛・むくみに。至福のひとときを。</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="grid">
+          <section class="card">
+            <h2>ご予約・お問合せ</h2>
+            <a class="hpBanner" href="https://beauty.hotpepper.jp/kr/slnH000790551/" target="_blank" rel="noopener">
+              <div class="hpTop">
+                <div class="hpMark">HP</div>
+                <div>
+                  <div class="hpTitle">ホットペッパーで24時間即時予約</div>
+                  <div style="font-size:12px; color:var(--muted); margin-top:2px;">空席確認・クーポン利用はこちら</div>
+                </div>
+              </div>
+            </a>
+            <div class="btnRow">
+              <a class="btn" href="tel:08062549888">電話予約</a>
+              <a class="btn btnPrimary" href="https://line.me/ti/p/uRbSGe63CF" target="_blank">LINE相談</a>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>施術メニュー</h2>
+            
+            <div class="menuBlock">
+              <div class="menuHead"><div class="title">Aコース：全身ボディケア（もみほぐし）</div></div>
+              <table class="menuTable">
+                <tr><th>30分</th><td class="price">2,180円</td></tr>
+                <tr><th>60分</th><td class="price">3,980円</td></tr>
+                <tr><th>90分</th><td class="price">6,180円</td></tr>
+              </table>
+            </div>
+
+              <div class="menuBlock">
+              <div class="menuHead"><div class="title">Bコース：アロマセラピー</div></div>
+              <table class="menuTable">
+                <tr><th>60分</th><td class="price">6,600円</td></tr>
+                <tr><th>90分</th><td class="price">9,800円</td></tr>
+              </table>
+            </div>
+
+          <div class="menuBlock">
+              <div class="menuHead"><div class="title">Cコース：全身ボディーケア　アロマリンパセラピー</div></div>
+              <table class="menuTable">
+                <tr><th>50分</th><td class="price">6,600円</td></tr>
+                <tr><th>70分</th><td class="price">8,800円</td></tr>
+               <tr><th>90分</th><td class="price">10,800円</td></tr>
+               <tr><th>110分</th><td class="price">12,800円</td></tr>
+              </table>
+            </div>
+
+            <div class="menuBlock">
+              <div class="menuHead"><div class="title">Dコース：東洋漢方アロマリンパ　ホットストーンセラピー </div></div>
+              <table class="menuTable">
+                <tr><th>60分</th><td class="price">8,800円</td></tr>
+                <tr><th>80分</th><td class="price">11,000円</td></tr>
+                <tr><th>100分</th><td class="price">13,200円</td></tr>
+                <tr><th>120分</th><td class="price">15,400円</td></tr>
+                <tr><th>150分</th><td class="price">17,800円</td></tr>
+              </table>
+            </div>
+
+            <div class="menuHead" style="background:none; padding:10px 0;"><div class="title" style="font-size:14px;">オプション・その他</div></div>
+            <div class="optionGrid">
+              <div class="optionItem"><span>シャワーサービス</span><span class="price">+500円</span></div>
+              <div class="optionItem"><span>ハーブボール温熱療法 (20分)</span><span class="price">2,200円</span></div>
+              <div class="optionItem"><span>ヘッドスパ (20分)</span><span class="price">2,200円</span></div>
+              <div class="optionItem"><span>耳のエステ (30分)</span><span class="price">3,300円</span></div>
+              <div class="optionItem"><span>漢方フットバス (30分)</span><span class="price">3,300円</span></div>
+              <div class="optionItem"><span>カッピング/吸い玉 (30分)</span><span class="price">3,300円</span></div>
+            </div>
+
+            <div class="note">※価格はすべて税込です。体調やご希望に合わせた組み合わせも可能です。</div>
+          </section>
+
+          <section class="card">
+            <h2>店舗情報</h2>
+            <ul class="list">
+              <li><strong>住所：</strong>〒501-3827 岐阜県関市宮地町5-6 旭ヶ丘総合ビル 1F</li>
+              <li><strong>営業時間：</strong>10:00〜24:00（最終受付：コースによる）</li>
+              <li><strong>電話番号：</strong><a href="tel:08062549888" style="color:var(--gold2); text-decoration:underline;">080-6254-9888</a></li>
+              <li><strong>定休日：</strong>不定休</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>アクセス</h2>
+            <div class="mapBox">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.453303643729!2d136.9079738!3d35.5140654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003058f44815487%3A0xe744e45e527d7042!2z44CSNTAxLTM4Mjcg5biy6Zic55yM6Zai5biC5a6u5Zyw55S6777V4oiS777W!5e0!3m2!1sja!2sjp!4v1700000000000" 
+                allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div style="margin-top:12px;">
+              <a class="btn btnPrimary" 
+                 href="https://www.google.com/maps/dir/?api=1&destination=岐阜県関市宮地町5-6+旭ヶ丘総合ビル" 
+                 target="_blank">
+                Googleマップで道案内を開始
+              </a>
+            </div>
+          </section>
+
+          <div class="footer">
+            © Luna Belle All Rights Reserved.<br>
+            Oriental Relaxation & Therapy
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky">
+    <a href="https://beauty.hotpepper.jp/kr/slnH000790551/" target="_blank">
+      空席確認・ネット予約
+    </a>
+  </div>
+</body>
+</html>
