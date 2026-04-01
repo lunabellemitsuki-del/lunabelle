@@ -250,9 +250,9 @@ Gemini 修正
               </div>
             </a>
             <div class="btnRow">
-              <a class="btn" href="tel:08062549888">電話予約</a>
-              <a class="btn btnPrimary" href="https://line.me/ti/p/uRbSGe63CF" target="_blank">LINE相談</a>
-            </div>
+          <a class="btn" href="tel:08062549888">電話予約</a>
+          <a class="btn btnPrimary" href="https://www.instagram.com/lunabelle1209/" target="_blank" rel="noopener">Instagram</a>
+        </div>
           </section>
 
           <section class="card">
