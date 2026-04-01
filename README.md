@@ -320,20 +320,20 @@ Gemini 修正
           </section>
 
           <section class="card">
-            <h2>アクセス</h2>
-            <div class="mapBox">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.453303643729!2d136.9079738!3d35.5140654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003058f44815487%3A0xe744e45e527d7042!2z44CSNTAxLTM4Mjcg5biy6Zic55yM6Zai5biC5a6u5Zyw55S6777V4oiS777W!5e0!3m2!1sja!2sjp!4v1700000000000" 
-                allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div style="margin-top:12px;">
-              <a class="btn btnPrimary" 
-                 href="https://www.google.com/maps/dir/?api=1&destination=岐阜県関市宮地町5-6+旭ヶ丘総合ビル" 
-                 target="_blank">
-                Googleマップで道案内を開始
-              </a>
-            </div>
-          </section>
+        <h2>アクセス</h2>
+        <div class="mapBox">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.421634888277!2d136.9177114761405!3d35.56702413612502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600305886369f697%3A0x673e16b9b3294331!2zTHVuYSBCZWxsZSDvvIjjg6vjg4rjg5vjg6vvvIkg5p2x5rSL5byP44Oq44Op44Kv44K844O844K344On44Oz!5e0!3m2!1sja!2sjp!4v1716350000000!5m2!1sja!2sjp" 
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="margin-top:12px;">
+          <a class="btn btnPrimary" 
+             href="https://www.google.com/maps/dir/?api=1&destination=Luna+Belle+岐阜県関市宮地町5-6" 
+             target="_blank">
+            Googleマップで道案内を開始
+          </a>
+        </div>
+      </section>
 
           <div class="footer">
             © Luna Belle All Rights Reserved.<br>
