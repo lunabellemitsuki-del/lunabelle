@@ -1,6 +1,3 @@
-# lunabelle
-Gemini 修正
-
 <!doctype html>
 <html lang="ja">
 <head>
@@ -8,6 +5,8 @@ Gemini 修正
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Luna Belle｜岐阜県関市の東洋式リラクゼーションサロン</title>
   <meta name="description" content="Luna Belle（ルナベル）公式サイト。岐阜県関市宮地町の東洋式リラクゼーションサロン。肩こり・腰痛・疲労回復に。">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -18,6 +17,7 @@ Gemini 修正
       --muted:rgba(243,240,230,.75);
       --gold:#d7b56d;
       --gold2:#f2d79a;
+      --moon-color: #fdf08a; /* 新しい月の色 */
       --line:rgba(215,181,109,.28);
       --radius:16px;
     }
@@ -48,38 +48,72 @@ Gemini 修正
       background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
     }
 
-    /* HERO / 新しい三日月デザイン */
+    /* HERO / 新しいロゴデザイン統合 */
     .hero{
-      padding:40px 16px;
+      padding:60px 16px;
       background:
         radial-gradient(circle at 50% 50%, rgba(215,181,109,.12), transparent 70%);
       text-align: center;
       border-bottom: 1px solid var(--line);
     }
-    .heroTop{display:flex;flex-direction:column;align-items:center;gap:16px}
     
-    @media(min-width:600px){
-      .heroTop{flex-direction:row; text-align:left; justify-content:center;}
+    /* ロゴアセンブリ */
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
 
-    .moon-wrap {
-      position: relative;
-      width: 100px;
-      height: 100px;
+    .logo-main {
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: 'Playfair Display', serif;
+      color: #ffffff;
+      font-size: clamp(32px, 8vw, 54px); /* レスポンシブなフォントサイズ */
+      letter-spacing: 0.05em;
+      line-height: 1;
     }
-    /* 月の背後の光彩 */
-    .moon-glow {
-      position: absolute;
+
+    .moon-wrapper {
+      position: relative;
       width: 60px;
       height: 60px;
-      background: var(--gold);
-      filter: blur(25px);
-      opacity: 0.3;
-      border-radius: 50%;
+      margin: 0 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
     }
+
+    .css-moon {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: inset -18px 0 0 0 var(--moon-color); 
+      transform: rotate(140deg); 
+      filter: drop-shadow(0 0 8px rgba(253, 240, 138, 0.4));
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .stars::before, .stars::after {
+      content: '✨';
+      position: absolute;
+      color: var(--moon-color);
+    }
+    .stars::before { top: 15%; left: 25%; font-size: 16px; } 
+    .stars::after { bottom: 10%; right: 10%; font-size: 4px; }
+
+    .text-luna { margin-right: 2px; }
+    .text-belle { margin-left: 2px; }
 
     .kicker{
       display:inline-block;
@@ -90,19 +124,11 @@ Gemini 修正
       padding:4px 16px;
       border-radius:999px;
       background: rgba(0,0,0,0.3);
-      margin-bottom: 8px;
+      margin-bottom: 15px;
     }
-    .brand{
-      margin:0;
-      font-size:42px;
-      letter-spacing:.1em;
-      font-family:"Times New Roman",serif;
-      color:var(--gold2);
-      line-height:1.1;
-      text-shadow: 0 0 10px rgba(215,181,109,0.3);
-    }
-    .tagline{margin:8px 0 0;color:var(--muted);font-size:14px; letter-spacing: 0.05em;}
+    .tagline{margin:15px 0 0;color:var(--muted);font-size:14px; letter-spacing: 0.1em;}
 
+    /* グリッド・カード等 */
     .grid{padding:12px;display:grid;gap:12px}
     .card{
       background: rgba(16,26,47,.92);
@@ -153,7 +179,6 @@ Gemini 修正
     }
     .btnPrimary{ border:none; background: linear-gradient(180deg, var(--gold2), var(--gold)); color:#1b1408; }
 
-    /* メニューデザイン改善 */
     .menuBlock{
       margin-bottom:16px;
       border:1px solid rgba(215,181,109,.18);
@@ -216,24 +241,19 @@ Gemini 修正
       <div class="inner">
 
         <section class="hero">
-          <div class="heroTop">
-            <div class="moon-wrap">
-              <div class="moon-glow"></div>
-              <svg width="70" height="70" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M42 12C31.5 12 22 19.5 18 30C16 36 17.5 43 21 48C14 44 10 36 10 28C10 16 20 6 32 6C36 6 40 7.5 43 10C42.7 10 42.3 10 42 12Z" fill="url(#moonGrad)"/>
-                <defs>
-                  <linearGradient id="moonGrad" x1="10" y1="6" x2="43" y2="48" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#f2d79a"/>
-                    <stop offset="1" stop-color="#d7b56d"/>
-                  </linearGradient>
-                </defs>
-              </svg>
+          <div class="logo-container">
+            <span class="kicker">東洋式リラクゼーションサロン</span>
+            
+            <div class="logo-main">
+              <span class="text-luna">Luna</span>
+              <div class="moon-wrapper">
+                <div class="css-moon"></div>
+                <div class="stars"></div>
+              </div>
+              <span class="text-belle">belle</span>
             </div>
-            <div>
-              <span class="kicker">東洋式リラクゼーションサロン</span>
-              <h1 class="brand">Luna Belle</h1>
-              <p class="tagline">肩こり・腰痛・むくみに。至福のひとときを。</p>
-            </div>
+
+            <p class="tagline">肩こり・腰痛・むくみに。至福のひとときを。</p>
           </div>
         </section>
 
@@ -250,9 +270,9 @@ Gemini 修正
               </div>
             </a>
             <div class="btnRow">
-          <a class="btn" href="tel:08062549888">電話予約</a>
-          <a class="btn btnPrimary" href="https://www.instagram.com/lunabelle1209/" target="_blank" rel="noopener">Instagram</a>
-        </div>
+              <a class="btn" href="tel:08062549888">電話予約</a>
+              <a class="btn btnPrimary" href="https://www.instagram.com/lunabelle1209/" target="_blank" rel="noopener">Instagram</a>
+            </div>
           </section>
 
           <section class="card">
@@ -267,7 +287,7 @@ Gemini 修正
               </table>
             </div>
 
-              <div class="menuBlock">
+            <div class="menuBlock">
               <div class="menuHead"><div class="title">Bコース：アロマセラピー</div></div>
               <table class="menuTable">
                 <tr><th>60分</th><td class="price">6,600円</td></tr>
@@ -275,13 +295,13 @@ Gemini 修正
               </table>
             </div>
 
-          <div class="menuBlock">
+            <div class="menuBlock">
               <div class="menuHead"><div class="title">Cコース：全身ボディーケア　アロマリンパセラピー</div></div>
               <table class="menuTable">
                 <tr><th>50分</th><td class="price">6,600円</td></tr>
                 <tr><th>70分</th><td class="price">8,800円</td></tr>
-               <tr><th>90分</th><td class="price">10,800円</td></tr>
-               <tr><th>110分</th><td class="price">12,800円</td></tr>
+                <tr><th>90分</th><td class="price">10,800円</td></tr>
+                <tr><th>110分</th><td class="price">12,800円</td></tr>
               </table>
             </div>
 
@@ -320,20 +340,21 @@ Gemini 修正
           </section>
 
           <section class="card">
-        <h2>アクセス</h2>
-        <div class="mapBox">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.421634888277!2d136.9177114761405!3d35.56702413612502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600305886369f697%3A0x673e16b9b3294331!2zTHVuYSBCZWxsZSDvvIjjg6vjg4rjg5vjg6vvvIkg5p2x5rSL5byP44Oq44Op44Kv44K844O844K344On44Oz!5e0!3m2!1sja!2sjp!4v1716350000000!5m2!1sja!2sjp" 
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div style="margin-top:12px;">
-          <a class="btn btnPrimary" 
-             href="https://www.google.com/maps/dir/?api=1&destination=Luna+Belle+岐阜県関市宮地町5-6" 
-             target="_blank">
-            Googleマップで道案内を開始
-          </a>
-        </div>
-      </section>
+  <h2>アクセス</h2>
+  <div class="mapBox">
+    <iframe 
+      src="https://www.google.com/maps?q=岐阜県関市宮地町5-6%20Luna%20Belle&output=embed" 
+      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  <div style="margin-top:12px;">
+    <a class="btn btnPrimary" 
+       href="https://www.google.com/maps/dir/?api=1&destination=岐阜県関市宮地町5-6+Luna+Belle" 
+       target="_blank">
+      Googleマップで道案内を開始
+    </a>
+  </div>
+</section>
 
           <div class="footer">
             © Luna Belle All Rights Reserved.<br>
